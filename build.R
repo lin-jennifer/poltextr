@@ -3,11 +3,11 @@
 # ------------------------------- #
 
 # Remove previous version just in Case
-remove.packages("ncfdown")
+remove.packages("poltextr")
 
 # Install with devtools
 library(devtools)
-devtools::install("../ncfdown")
+devtools::install("../poltextr")
 
 # Load to check it is all good
-library(ncfdown)
+library(poltextr)
