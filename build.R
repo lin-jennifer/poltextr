@@ -11,3 +11,4 @@ devtools::install("../poltextr")
 
 # Load to check it is all good
 library(poltextr)
+data(package="poltextr")
