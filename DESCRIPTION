@@ -1,11 +1,11 @@
 Package: poltextr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Easy Access Political Texts in R
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Jennifer Lin
+Maintainer: Jennifer Lin <jenniferlin2025@u.northwestern.edu>
+Description: This package contains corpuses of political texts that can be called into R with ease
+    New texts will be added.
+License: MIT
 Encoding: UTF-8
 LazyData: true
