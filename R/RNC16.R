@@ -9,8 +9,8 @@ library("readtext")
 library(tidyverse)
 
 rnc16raw <- dir(
-  here::here("data-raw/RNC16/"),  # Set to same location as `download_dir` above
-  pattern    = ".+.txt$",   # Finds Stata Files
+  here::here("data-raw/RNC16/"),
+  pattern    = ".+.txt$",   # Finds text Files
   full.names = TRUE,        # List Full File Path Names
   recursive  = TRUE)        # Repeat
 

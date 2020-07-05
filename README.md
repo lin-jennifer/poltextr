@@ -1,4 +1,4 @@
-# `poltextr`: Library of Political Texts <img src="man/poltextr.png" align="right" width=120 />
+# `poltextr`: Library of Political Texts <img src="man/figures/poltextr.png" align="right" width=120 />
 
 *This package is permanently under construction as new files will be added*
 

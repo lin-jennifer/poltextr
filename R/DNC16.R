@@ -1,4 +1,3 @@
-# DNC 16
 
 # Create Corpus
 
@@ -9,8 +8,8 @@ library("readtext")
 library(tidyverse)
 
 dnc16raw <- dir(
-  here::here("data-raw/DNC16/"),  # Set to same location as `download_dir` above
-  pattern    = ".+.txt$",   # Finds Stata Files
+  here::here("data-raw/DNC16/"),
+  pattern    = ".+.txt$",   # Finds text Files
   full.names = TRUE,        # List Full File Path Names
   recursive  = TRUE)        # Repeat
 
