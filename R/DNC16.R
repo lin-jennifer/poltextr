@@ -1,3 +1,11 @@
+#' Democrat National Convention 2016
+#'
+#' Captures the speeches given at the 2016 Democrat
+#' National Convention
+#'
+#'
+#' @name dnc16
+#' @rdname dnc16
 
 # Create Corpus
 
