@@ -2,8 +2,8 @@ Package: poltextr
 Type: Package
 Title: Easy Access Political Texts in R
 Version: 0.1.0
-Author: Jennifer Lin
-Maintainer: Jennifer Lin <jenniferlin2025@u.northwestern.edu>
+Authors@R: c(
+    person("Jennifer", "Lin", email = "jenniferlin2025@u.northwestern.edu", role = c("aut", "cre")))
 Description: This package contains corpuses of political texts that can be called into R with ease
     New texts will be added.
 License: MIT
