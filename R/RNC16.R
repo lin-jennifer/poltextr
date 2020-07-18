@@ -1,4 +1,14 @@
-# RNC 16
+#' Republican National Convention 2016
+#'
+#' Captures the speeches given at the 2016 Republican
+#' National Convention
+#'
+#' @param rnc16_meta Metadata file for convention. Identifies speakers,
+#' day, filename and source
+#'
+#'
+#' @name rnc16
+#' @rdname rnc16
 
 # Create Corpus
 

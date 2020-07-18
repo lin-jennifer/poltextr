@@ -3,6 +3,10 @@
 \name{dnc16}
 \alias{dnc16}
 \title{Democrat National Convention 2016}
+\arguments{
+\item{dnc16_meta}{Metadata file for convention. Identifies speakers,
+day, filename and source}
+}
 \description{
 Captures the speeches given at the 2016 Democrat
 National Convention

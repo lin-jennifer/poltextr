@@ -3,6 +3,9 @@
 #' Captures the speeches given at the 2016 Democrat
 #' National Convention
 #'
+#' @param dnc16_meta Metadata file for convention. Identifies speakers,
+#' day, filename and source
+#'
 #'
 #' @name dnc16
 #' @rdname dnc16
