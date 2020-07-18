@@ -63,3 +63,4 @@ scrapeSOTU <- function(url, content){
   read_html(url) %>%
     html_nodes(content) %>% html_text()
 }
+

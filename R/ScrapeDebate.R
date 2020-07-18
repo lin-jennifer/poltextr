@@ -39,7 +39,7 @@
 scrapeDebUCSB <- function(url){
   debate_text <- read_html(url) %>%
     html_nodes('.field-docs-content') %>% html_text()
-  debate_tidy <- gsub("\\n(?![A-Z]{3})", " ", debate_text, perl = TRUE)
+  debate_tidy <- gsub("\\n(?![A-Z]{4})", " ", debate_text, perl = TRUE)
 }
 
 #' @rdname ScrapeDebate
@@ -47,5 +47,5 @@ scrapeDebUCSB <- function(url){
 scrapeDebOrg <- function(url){
   debate_text <- read_html(url) %>%
     html_nodes(xpath = '//*[@id="content-sm"]') %>% html_text()
-  debate_tidy <- gsub("\\n(?![A-Z]{3})", " ", debate_text, perl = TRUE)
+  debate_tidy <- gsub("\\n(?![A-Z]{4})", " ", debate_text, perl = TRUE)
 }
