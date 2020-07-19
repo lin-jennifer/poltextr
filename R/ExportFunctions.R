@@ -10,7 +10,7 @@
 #'
 #' @rdname ExportFunctions
 #' @export
-exportDoc <- function(df, dest, ...){
+exportDoc <- function(df, dest){
   write.table(
     df, dest,
     sep="\t",

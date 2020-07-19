@@ -5,7 +5,7 @@
 \alias{exportDoc}
 \title{Export Functions for General Texts}
 \usage{
-exportDoc(df, dest, ...)
+exportDoc(df, dest)
 }
 \arguments{
 \item{df}{Data frame to export}
