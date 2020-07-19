@@ -1,0 +1,16 @@
+reference:
+- title: Data
+  desc:  Library of Political Texts
+- contents:
+  - dnc16
+  - dnc16_meta
+  - rnc16
+  - rnc16_meta
+- title: Scrape Functions
+- contents:
+  - scrapeDebUCSB
+  - scrapeDebOrg
+  - starts_with("scrape")
+- title: Export
+- contents:
+  - exportDoc

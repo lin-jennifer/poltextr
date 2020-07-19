@@ -1,0 +1,16 @@
+---
+title: "Scrape Functions"
+author: "Jennifer Lin"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Scrape Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# General Texts
+
+![](img/InaugURL.png)
+
+# Debates

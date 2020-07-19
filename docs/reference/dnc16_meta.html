@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • poltextr</title>
+<title>Metadata File for the 2016 DNC — dnc16_meta • poltextr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Metadata File for the 2016 DNC — dnc16_meta" />
+<meta property="og:description" content="Metadata File for the 2016 DNC" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -118,104 +119,50 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Metadata File for the 2016 DNC</h1>
+    
+    <div class="hidden name"><code>dnc16_meta.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Metadata File for the 2016 DNC</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>dnc16_meta</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-data" class="hasAnchor"><a href="#section-data" class="anchor"></a>Data</h2>
-          <p class="section-desc"><p>Library of Political Texts</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="dnc16.html">dnc16</a></code> </p>
-        </td>
-        <td><p>Democrat National Convention 2016</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dnc16_meta.html">dnc16_meta</a></code> </p>
-        </td>
-        <td><p>Metadata File for the 2016 DNC</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="rnc16.html">rnc16</a></code> </p>
-        </td>
-        <td><p>Republican National Convention 2016</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="rnc16_meta.html">rnc16_meta</a></code> </p>
-        </td>
-        <td><p>Metadata File for the 2016 RNC</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-scrape-functions" class="hasAnchor"><a href="#section-scrape-functions" class="anchor"></a>Scrape Functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ScrapeDebate.html">scrapeDebUCSB()</a></code> <code><a href="ScrapeDebate.html">scrapeDebOrg()</a></code> </p>
-        </td>
-        <td><p>Scraper Functions for Debates</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ScrapeFunctions.html">scrapePlat()</a></code> <code><a href="ScrapeFunctions.html">scrapeInaug()</a></code> <code><a href="ScrapeFunctions.html">scrapeSOTU()</a></code> </p>
-        </td>
-        <td><p>Scraper Functions for General Texts</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-export" class="hasAnchor"><a href="#section-export" class="anchor"></a>Export</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ExportFunctions.html">exportDoc()</a></code> </p>
-        </td>
-        <td><p>Export Functions for General Texts</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>a data frame with 155 rows and 7 variables</p><dl'>
+<dt>Last</dt><dd><p>Last Name of Speaker</p></dd>
+<dt>First</dt><dd><p>First Name of Speaker</p></dd>
+<dt>Filename</dt><dd><p>Corresponding File name to <code><a href='dnc16.html'>dnc16</a></code></p></dd>
+<dt>Day</dt><dd><p>Day in the convention the speech was given</p></dd>
+<dt>Type</dt><dd><p>speech or benediction</p></dd>
+<dt>Source</dt><dd><p>Provider of the document</p></dd>
+<dt>Convention</dt><dd><p>Type of convention -- DNC</p></dd>
+
+</dl>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>dnc16_meta</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 155 x 7</span><span>
+#&gt;    Last      First     Filename            Day    Type  Source        Convention
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>               </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     
+#&gt; </span><span style='color: #555555;'> 1</span><span> Franken   Al        dnc.franken.txt     Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 2</span><span> Daughtry  Leah      dnc.daughtry.txt    Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 3</span><span> Casey     Bob       dnc.casey.txt       Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 4</span><span> Gillibra… Kirsten   dnc.gillibrand.txt  Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 5</span><span> Silverman Sarah     dnc.silverman.txt   Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 6</span><span> Warren    Elizabeth dnc.warren.txt      Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 7</span><span> Sanders   Bernie    dnc.sanders.txt     Monday spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'> 8</span><span> Obama     Michelle  dnc.obamamichelle.… Monday spee… Washington P… DNC       
+#&gt; </span><span style='color: #555555;'> 9</span><span> Silva     Astrid    dnc.silva.txt       Monday spee… Fandom        DNC       
+#&gt; </span><span style='color: #555555;'>10</span><span> Harkin    Tom       dnc.harkin.txt      Tuesd… spee… Cision        DNC       
+#&gt; </span><span style='color: #555555;'># … with 145 more rows</span><span></div></span></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
