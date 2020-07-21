@@ -41,10 +41,14 @@ UNLV16tidy <- UNLV16 %>% separate(
     Year    = 2016,
     Month   = "October",
     Day     = 19,
+    Date    = as.Date("2016-10-19"),
     Network = "Fox",
-    Election= "General"
+    Election= "General",
+    Type    = "Presidential",
+    ElectYR = 2016
   ) %>%
-  relocate(text, .after = last_col())
+  relocate(text, .after = last_col()) %>%
+  select(-c(speaker))
 write.csv(UNLV16tidy, here::here("data-raw/Debate/ge16unlv.csv"))
 
 # Washington University St. Louis
@@ -84,10 +88,14 @@ WASHU16tidy <- WASHU16 %>% separate(
     Year    = 2016,
     Month   = "October",
     Day     = 9,
+    Date    = as.Date("2016-10-09"),
     Network = "CNN/ABC",
-    Election= "General"
+    Election= "General",
+    Type    = "Presidential",
+    ElectYR = 2016
   ) %>%
-  relocate(text, .after = last_col())
+  relocate(text, .after = last_col()) %>%
+  select(-c(speaker))
 write.csv(WASHU16tidy, here::here("data-raw/Debate/ge16washu.csv"))
 
 

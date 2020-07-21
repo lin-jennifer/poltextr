@@ -5,6 +5,7 @@
 \alias{scrapePlat}
 \alias{scrapeInaug}
 \alias{scrapeSOTU}
+\alias{scrapeUCSB}
 \title{Scraper Functions for General Texts}
 \usage{
 scrapePlat(url, content)
@@ -12,6 +13,8 @@ scrapePlat(url, content)
 scrapeInaug(n, content)
 
 scrapeSOTU(url, content)
+
+scrapeUCSB(n, content)
 }
 \arguments{
 \item{url}{A URL in quotes}
@@ -53,5 +56,11 @@ Obama2012 <- scrapeInaug(15, '.field-docs-content')
 # State of the Union
 url <- "https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-19"
 ObamaSOTU16 <- scrapeSOTU(url, '.field-docs-content')
+
+# Any Text on UCSB
+# https://www.presidency.ucsb.edu/node/321069
+# n = 321069
+ObamaFarewell <- scrapeUCSB(321069, '.field-docs-content')
+
 
 }

@@ -108,7 +108,12 @@ https://www.presidency.ucsb.edu" />
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/lin-jennifer/poltextr/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -123,7 +128,7 @@ https://www.presidency.ucsb.edu" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Scraper Functions for General Texts</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/lin-jennifer/poltextr/blob/master/R/ScraperFunctions.R'><code>R/ScraperFunctions.R</code></a></small>
     <div class="hidden name"><code>ScrapeFunctions.Rd</code></div>
     </div>
 
@@ -136,7 +141,9 @@ https://www.presidency.ucsb.edu" />
 
 <span class='fu'>scrapeInaug</span>(<span class='no'>n</span>, <span class='no'>content</span>)
 
-<span class='fu'>scrapeSOTU</span>(<span class='no'>url</span>, <span class='no'>content</span>)</pre>
+<span class='fu'>scrapeSOTU</span>(<span class='no'>url</span>, <span class='no'>content</span>)
+
+<span class='fu'>scrapeUCSB</span>(<span class='no'>n</span>, <span class='no'>content</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -183,7 +190,12 @@ number on the URL</p>
 
 <span class='co'># State of the Union</span>
 <span class='no'>url</span> <span class='kw'>&lt;-</span> <span class='st'>"https://www.presidency.ucsb.edu/documents/address-before-joint-session-the-congress-the-state-the-union-19"</span>
-<span class='no'>ObamaSOTU16</span> <span class='kw'>&lt;-</span> <span class='fu'>scrapeSOTU</span>(<span class='no'>url</span>, <span class='st'>'.field-docs-content'</span>)</div></pre>
+<span class='no'>ObamaSOTU16</span> <span class='kw'>&lt;-</span> <span class='fu'>scrapeSOTU</span>(<span class='no'>url</span>, <span class='st'>'.field-docs-content'</span>)
+
+<span class='co'># Any Text on UCSB</span>
+<span class='co'># https://www.presidency.ucsb.edu/node/321069</span>
+<span class='co'># n = 321069</span>
+<span class='no'>ObamaFarewell</span> <span class='kw'>&lt;-</span> <span class='fu'>scrapeUCSB</span>(<span class='fl'>321069</span>, <span class='st'>'.field-docs-content'</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
