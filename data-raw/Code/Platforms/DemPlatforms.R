@@ -140,21 +140,6 @@ Dem84 <- bind_cols(head, text)
 write.csv(Dem84, here::here("data-raw/Platforms/dem84.csv"))
 
 
-# ********************************************
-# Add Metadata Details ######
-# ********************************************
-
-
-DemPlatraw <- dir(
-  here::here("data-raw/Platforms"),
-  pattern    = "[^dem]*.txt",   # Finds text Files
-  full.names = TRUE,        # List Full File Path Names
-  recursive  = TRUE)        # Repeat
-
-DemPlat <- corpus(readtext(DemPlatraw), docid_field = "doc_id")
-summary(DemPlat)
-DemPlat <- data.frame(text = sapply(DemPlat, as.character), stringsAsFactors = FALSE)
-DemPlat <- tibble::rownames_to_column(DemPlat, "Filename")
 
 # ********************************************
 # NOTES ######
