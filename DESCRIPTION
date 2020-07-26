@@ -8,7 +8,7 @@ Authors@R: c(
     person("Jennifer", "Lin", email = "jenniferlin2025@u.northwestern.edu", role = c("aut", "cre", "cph")))
 Description: This package contains corpuses of political texts that can be called into R with ease, along with helper scrape functions that can scrape texts off select websites based on the site that the function is designed. In the package documentation, anything that starts with "Scraper" denotes a function, all else are political texts that are stored as ".RData" files.
     New texts will be added.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
