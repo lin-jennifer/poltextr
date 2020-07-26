@@ -1,0 +1,17 @@
+citHeader("To cite poltextr in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "poltextr: Easy Access Political Texts in R",
+  author   = person(given = "Jennifer",
+             family = "Lin",
+             role = c("aut", "cre", "cph"),
+             email = "jenniferlin2025@u.northwestern.edu"),
+  year     = "2020",
+  note     = "R package Version 0.1.0",
+  url      = "https://lin-jennifer.github.io/poltextr/",
+  key      = "poltextr",
+  textVersion = paste(
+
+  )
+)
