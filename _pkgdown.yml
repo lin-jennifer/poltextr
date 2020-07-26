@@ -6,6 +6,7 @@ reference:
   - dnc16_meta
   - rnc16
   - rnc16_meta
+  - DemocratPlatforms
 - title: Scrape Functions
 - contents:
   - scrapeDebUCSB

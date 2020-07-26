@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • poltextr</title>
+<title>Democrat Party Platforms — DemocratPlatforms • poltextr</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Democrat Party Platforms — DemocratPlatforms" />
+<meta property="og:description" content="Party Platforms for the Democrat party from 2000 to 2016" />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -123,110 +124,41 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Democrat Party Platforms</h1>
+    <small class="dont-index">Source: <a href='https://github.com/lin-jennifer/poltextr/blob/master/R/DemocratPlatforms.R'><code>R/DemocratPlatforms.R</code></a></small>
+    <div class="hidden name"><code>DemocratPlatforms.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Party Platforms for the Democrat party from 2000 to 2016</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='no'>DemocratPlatforms</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-data" class="hasAnchor"><a href="#section-data" class="anchor"></a>Data</h2>
-          <p class="section-desc"><p>Library of Political Texts</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="dnc16.html">dnc16</a></code> </p>
-        </td>
-        <td><p>Democrat National Convention 2016</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dnc16_meta.html">dnc16_meta</a></code> </p>
-        </td>
-        <td><p>Metadata File for the 2016 DNC</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="rnc16.html">rnc16</a></code> </p>
-        </td>
-        <td><p>Republican National Convention 2016</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="rnc16_meta.html">rnc16_meta</a></code> </p>
-        </td>
-        <td><p>Metadata File for the 2016 RNC</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="DemocratPlatforms.html">DemocratPlatforms</a></code> </p>
-        </td>
-        <td><p>Democrat Party Platforms</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-scrape-functions" class="hasAnchor"><a href="#section-scrape-functions" class="anchor"></a>Scrape Functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ScrapeDebate.html">scrapeDebUCSB()</a></code> <code><a href="ScrapeDebate.html">scrapeDebOrg()</a></code> </p>
-        </td>
-        <td><p>Scraper Functions for Debates</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="ScrapeFunctions.html">scrapePlat()</a></code> <code><a href="ScrapeFunctions.html">scrapeInaug()</a></code> <code><a href="ScrapeFunctions.html">scrapeSOTU()</a></code> <code><a href="ScrapeFunctions.html">scrapeUCSB()</a></code> </p>
-        </td>
-        <td><p>Scraper Functions for General Texts</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-export" class="hasAnchor"><a href="#section-export" class="anchor"></a>Export</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="ExportFunctions.html">exportDoc()</a></code> </p>
-        </td>
-        <td><p>Export Functions for General Texts</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame</p><dl'>
+<dt>X</dt><dd><p>Line ID</p></dd>
+<dt>head</dt><dd><p>Heading of the Section</p></dd>
+<dt>Year</dt><dd><p>Year of the Election</p></dd>
+<dt>Party</dt><dd><p>Democrat</p></dd>
+<dt>Date</dt><dd><p>Date of the platform, as listed on UCSB site</p></dd>
+<dt>Candidate</dt><dd><p>Nominee for the election</p></dd>
+<dt>topic</dt><dd><p>General Topic of the section -- Economy, Society, Foreign Affair, Government, Introduction</p></dd>
+<dt>text</dt><dd><p>Actual text minus headings</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/national-political-party-platforms'>https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/national-political-party-platforms</a></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) <span class='no'>DemocratPlatforms</span></div></pre>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

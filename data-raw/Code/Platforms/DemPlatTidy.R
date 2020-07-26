@@ -18,9 +18,10 @@ Dem16 <- read.csv(here::here("data-raw/Platforms/dem16.csv"))
 Dem16 <- Dem16 %>% slice(1:14)
 Dem16 <- Dem16 %>%
   mutate(
-    Year  = 2016,
-    Party = "Democrat",
-    Date  = as.Date("2016-07-21")
+    Year     = 2016,
+    Party    = "Democrat",
+    Date     = as.Date("2016-07-21"),
+    Candidate= "Hillary Clinton"
   ) %>%
   tibble::add_column(
     topic = c(
@@ -46,9 +47,10 @@ Dem16 <- Dem16 %>%
 Dem12 <- read.csv(here::here("data-raw/Platforms/dem12.csv"))
 Dem12 <- Dem12 %>%
   mutate(
-    Year  = 2012,
-    Party = "Democrat",
-    Date  = as.Date("2012-09-03")
+    Year      = 2012,
+    Party     = "Democrat",
+    Date      = as.Date("2012-09-03"),
+    Candidate = "Barack Obama"
   ) %>%
   tibble::add_column(
     topic = c(
@@ -85,9 +87,10 @@ Dem12 <- Dem12 %>%
 Dem08 <- read.csv(here::here("data-raw/Platforms/dem08.csv"))
 Dem08 <- Dem08 %>%
   mutate(
-    Year  = 2008,
-    Party = "Democrat",
-    Date  = as.Date("2008-08-25"),
+    Year      = 2008,
+    Party     = "Democrat",
+    Date      = as.Date("2008-08-25"),
+    Candidate = "Barack Obama",
     topic = case_when(
       X %in% c(1:25) ~ "Economy",
       X %in% c(26:66) ~ "Foreign Affairs",
@@ -96,4 +99,41 @@ Dem08 <- Dem08 %>%
   ) %>%
   relocate(text, .after = last_col())
 
+Dem04 <- read.csv(here::here("data-raw/Platforms/dem04.csv"))
+Dem04 <- Dem04 %>%
+  mutate(
+    Year      = 2004,
+    Party     = "Democrat",
+    Date      = as.Date("2004-07-27"),
+    Candidate = "John Kerry",
+    topic = case_when(
+      X == 1 ~ "Introduction",
+      X == 2 ~ "Foreign Affairs",
+      X == 3 ~ "Economy",
+      X == 4 ~ "Society",
+      X == 5 ~ "Government")
+  ) %>%
+  relocate(text, .after = last_col())
 
+Dem00 <- read.csv(here::here("data-raw/Platforms/dem00.csv"))
+Dem00 <- Dem00 %>%
+  mutate(
+    Year      = 2000,
+    Party     = "Democrat",
+    Date      = as.Date("2000-08-14"),
+    Candidate = "Albert Gore",
+    topic = case_when(
+      X ==     1      ~ "Introduction",
+      X %in% c(2:24)  ~ "Economy",
+      X %in% c(25:57) ~ "Society",
+      X %in% c(58:75) ~ "Foreign Affairs")
+  ) %>%
+  relocate(text, .after = last_col())
+
+# ********************************************
+# Generate Dataset ######
+# ********************************************
+
+DemocratPlatforms <- bind_rows(Dem16, Dem12, Dem08, Dem04, Dem00)
+save(DemocratPlatforms, file = here::here("data/DemocratPlatforms.rda"), compress='xz')
+usethis::use_data(DemocratPlatforms, overwrite = TRUE, compress = 'xz')
