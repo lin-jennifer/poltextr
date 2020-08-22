@@ -14,6 +14,32 @@ DemPlatraw <- dir(
   full.names = TRUE,        # List Full File Path Names
   recursive  = TRUE)        # Repeat
 
+Dem20 <- read.csv(here::here("data-raw/Platforms/dem20.csv"))
+Dem20 <- Dem20 %>%
+  mutate(
+    Year     = 2020,
+    Party    = "Democrat",
+    Date     = as.Date("2020-08-17"),
+    Candidate= "Joe Biden"
+  ) %>%
+  tibble::add_column(
+    topic = c(
+      "Introduction",
+      "Society",
+      "Economy",
+      "Society",
+      "Society",
+      "Society",
+      "Society",
+      "Elections",
+      "Society",
+      "Society",
+      "Foreign Affairs"),
+    .data = Dem20
+  ) %>%
+  relocate(text, .after = last_col())
+
+
 Dem16 <- read.csv(here::here("data-raw/Platforms/dem16.csv"))
 Dem16 <- Dem16 %>% slice(1:14)
 Dem16 <- Dem16 %>%
@@ -134,6 +160,6 @@ Dem00 <- Dem00 %>%
 # Generate Dataset ######
 # ********************************************
 
-DemocratPlatforms <- bind_rows(Dem16, Dem12, Dem08, Dem04, Dem00)
+DemocratPlatforms <- bind_rows(Dem20, Dem16, Dem12, Dem08, Dem04, Dem00)
 save(DemocratPlatforms, file = here::here("data/DemocratPlatforms.rda"), compress='xz')
 usethis::use_data(DemocratPlatforms, overwrite = TRUE, compress = 'xz')

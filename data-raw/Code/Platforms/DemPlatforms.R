@@ -10,6 +10,24 @@ library("quanteda")
 library(quanteda.corpora)
 library("readtext")
 
+D20   <- "https://www.presidency.ucsb.edu/documents/2020-democratic-party-platform"
+page  <-  read_html(D20)
+heads <-  page %>%
+  html_nodes(xpath = "//p/b/parent::p") %>%
+  html_text()
+all_p <-  page %>%
+  html_nodes(xpath = "//p") %>%
+  html_text()
+start <-  match(heads, all_p)
+end   <-  c(start[-1], length(all_p))
+Dem2020 <- as_tibble(do.call(rbind, mapply(function(a, b, h)
+{data.frame(head = h, text = paste(all_p[(a + 1):b], collapse = "\n"))
+}, a = start, b = end, h = heads, SIMPLIFY = FALSE)))
+write.csv(Dem2020, here::here("data-raw/Platforms/dem20.csv"))
+
+
+
+
 D16   <- "https://www.presidency.ucsb.edu/documents/2016-democratic-party-platform"
 page  <-  read_html(D16)
 heads <-  page %>%
