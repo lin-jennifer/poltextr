@@ -37,7 +37,8 @@ Dem20 <- Dem20 %>%
       "Foreign Affairs"),
     .data = Dem20
   ) %>%
-  relocate(text, .after = last_col())
+  relocate(text, .after = last_col())%>%
+  select(-c(X.1, head.1, text.1))
 
 
 Dem16 <- read.csv(here::here("data-raw/Platforms/dem16.csv"))
