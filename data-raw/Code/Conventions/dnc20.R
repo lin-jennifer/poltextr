@@ -36,7 +36,7 @@ Night1 <- Night1 %>%
   select(-c(X1, X2))
 
 Night2 <- read_delim(
-  "~/Desktop/poltextr/data-raw/DNC20/Night2.txt",
+  here::here("data-raw/DNC20/Night2.txt"),
   ":", escape_double = FALSE, col_names = FALSE,
   trim_ws = TRUE)
 Night2 <- Night2 %>%
@@ -50,7 +50,7 @@ Night2 <- Night2 %>%
   select(-c(X1, X2))
 
 Night3 <- read_delim(
-  "~/Desktop/poltextr/data-raw/DNC20/Night3.txt",
+  here::here("data-raw/DNC20/Night3.txt"),
   ":", escape_double = FALSE, col_names = FALSE,
   trim_ws = TRUE)
 Night3 <- Night3 %>%
@@ -64,7 +64,7 @@ Night3 <- Night3 %>%
   select(-c(X1, X2))
 
 Night4 <- read_delim(
-  "~/Desktop/poltextr/data-raw/DNC20/Night4.txt",
+  here::here("data-raw/DNC20/Night4.txt"),
   ":", escape_double = FALSE, col_names = FALSE,
   trim_ws = TRUE)
 Night4 <- Night4 %>%
