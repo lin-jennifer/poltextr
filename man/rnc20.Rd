@@ -28,6 +28,16 @@ National Convention
 Due to the online nature of the convention, the speeches
 included in this data set are those included in the 9-11 PM
 EST prime time livestream
+
+Links to the original speech transcripts from Rev are as follows:
+
+Night 1: \url{https://www.rev.com/blog/transcripts/2020-republican-national-convention-rnc-night-1-transcript}
+
+Night 2: \url{https://www.rev.com/blog/transcripts/2020-republican-national-convention-rnc-night-2-transcript}
+
+Night 3: \url{https://www.rev.com/blog/transcripts/2020-republican-national-convention-rnc-night-3-transcript}
+
+Night 4: \url{https://www.rev.com/blog/transcripts/2020-republican-national-convention-rnc-night-4-transcript}
 }
 \examples{
 \dontrun{rnc20}
